@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-
-const CountdownTimer = ({ stopTimerForUser, onDayEnd }) => {
-    const [timeLeft, setTimeLeft] = useState({ hours: 12, minutes: 0, seconds: 0 });
-=======
 // CountdownTimer.js
 import React, { useEffect, useState } from 'react';
 
 const CountdownTimer = ({ stopTimerForUser, onDayEnd }) => {
     const [timeLeft, setTimeLeft] = useState({ hours: 24, minutes: 0, seconds: 0 });
->>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
 
     useEffect(() => {
         if (!stopTimerForUser) {
@@ -20,11 +13,7 @@ const CountdownTimer = ({ stopTimerForUser, onDayEnd }) => {
                             if (prevTimeLeft.hours === 0) {
                                 clearInterval(timer);
                                 onDayEnd();
-<<<<<<< HEAD
-                                return { hours: 12, minutes: 0, seconds: 0 }; // Reset timer to 12 hours
-=======
-                                return prevTimeLeft;
->>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
+                                return { hours: 24, minutes: 0, seconds: 0 }; // Reset timer to 24 hours
                             }
                             return { hours: prevTimeLeft.hours - 1, minutes: 59, seconds: 59 };
                         }
