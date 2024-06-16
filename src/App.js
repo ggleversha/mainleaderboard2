@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 // App.js
->>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
 import React, { useState, useEffect } from 'react';
 import CountdownTimer from './components/CountdownTimer';
 import TaskForm from './components/TaskForm';
@@ -66,11 +63,7 @@ const App = () => {
                 <h2 className="app-subtitle">ANSWER DAILY QUESTIONS HERE</h2>
             </header>
             <CountdownTimer stopTimerForUser={stopTimerForUser} onDayEnd={handleDayEnd} />
-<<<<<<< HEAD
             <TaskForm userId={userId} storeTask={storeTask} daysCompleted={daysCompleted} taskSubmitted={taskSubmitted} />
-=======
-            <TaskForm userId={userId} storeTask={storeTask} daysCompleted={daysCompleted} setStopTimerForUser={setStopTimerForUser} taskSubmitted={taskSubmitted} />
->>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
             <button onClick={clearTasks}>Clear Tasks</button>
             <Leaderboard leaderboard={leaderboard} />
         </div>
