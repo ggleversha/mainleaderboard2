@@ -24,12 +24,18 @@
 .countdown-timer {
   font-size: 1.5em;
   margin-bottom: 20px;
+<<<<<<< HEAD
   color:white;
+=======
+>>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
 }
 
 .task-form {
   margin-bottom: 20px;
+<<<<<<< HEAD
   color: white; /* Set text color to white */
+=======
+>>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
 }
 
 .task-form table {
@@ -53,11 +59,14 @@
   margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 .question label, 
 .question input {
   color: white; /* Ensure inputs also have white text */
 }
 
+=======
+>>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
 .leaderboard {
   margin-top: 20px;
 }
@@ -75,12 +84,19 @@
   padding: 10px;
   border: 1px solid #ddd;
   text-align: left;
+<<<<<<< HEAD
   color:white;
 }
 
 .leaderboard th {
   background-color: black;
   color: white;
+=======
+}
+
+.leaderboard th {
+  background-color: #f2f2f2;
+>>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
 }
 
 .submit-task-button {
@@ -94,7 +110,11 @@
 button {
   margin-top: 20px;
   padding: 10px 20px;
+<<<<<<< HEAD
   background-color: black;
+=======
+  background-color: #007bff;
+>>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
   color: white;
   border: none;
   border-radius: 5px;

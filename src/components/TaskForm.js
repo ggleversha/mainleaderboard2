@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 const TaskForm = ({ userId, storeTask, daysCompleted, taskSubmitted }) => {
@@ -21,6 +22,27 @@ const TaskForm = ({ userId, storeTask, daysCompleted, taskSubmitted }) => {
         if (name && allQuestionsAnsweredYes) {
             const task = { name, daysCompleted: 1, ...questions };
             storeTask(task);
+=======
+// TaskForm.js
+import React, { useState } from 'react';
+
+const TaskForm = ({ userId, storeTask, daysCompleted, setStopTimerForUser, taskSubmitted }) => {
+    const [name, setName] = useState('');
+    const [questions, setQuestions] = useState({
+        q1: '',
+        q2: '',
+        q3: '',
+    });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (name && questions.q1 && questions.q2 && questions.q3) {
+            const task = { name, daysCompleted: 1, ...questions };
+            storeTask(task);
+            setName('');
+            setQuestions({ q1: '', q2: '', q3: '' });
+            setStopTimerForUser(true);
+>>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
         }
     };
 
@@ -41,6 +63,7 @@ const TaskForm = ({ userId, storeTask, daysCompleted, taskSubmitted }) => {
                 </div>
                 <div>
                     <label>Days Completed:</label>
+<<<<<<< HEAD
                     <input type="number" value={daysCompleted} readOnly />
                 </div>
                 <h3>Daily Questions</h3>
@@ -58,6 +81,45 @@ const TaskForm = ({ userId, storeTask, daysCompleted, taskSubmitted }) => {
                             />
                         </div>
                     ))}
+=======
+                    <input type="number" value={daysCompleted} onChange={() => {}} required disabled />
+                </div>
+                <h3>Daily Questions</h3>
+                <div className="questions">
+                    <div className="question">
+                        <label>What is 2 + 2?</label>
+                        <input
+                            type="text"
+                            name="q1"
+                            value={questions.q1}
+                            onChange={handleQuestionChange}
+                            required
+                            disabled={taskSubmitted}
+                        />
+                    </div>
+                    <div className="question">
+                        <label>What is 5 - 3?</label>
+                        <input
+                            type="text"
+                            name="q2"
+                            value={questions.q2}
+                            onChange={handleQuestionChange}
+                            required
+                            disabled={taskSubmitted}
+                        />
+                    </div>
+                    <div className="question">
+                        <label>What is 4 * 2?</label>
+                        <input
+                            type="text"
+                            name="q3"
+                            value={questions.q3}
+                            onChange={handleQuestionChange}
+                            required
+                            disabled={taskSubmitted}
+                        />
+                    </div>
+>>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
                 </div>
                 <button type="submit" disabled={taskSubmitted}>Submit</button>
             </form>
@@ -65,6 +127,7 @@ const TaskForm = ({ userId, storeTask, daysCompleted, taskSubmitted }) => {
     );
 };
 
+<<<<<<< HEAD
 const questionsList = [
     "Did you wake up at 4:44 am, earlier, or at an agreed time with Papps Mastery Staff?",
     "Did you adhere to your written Nutrition Plan (including weighing all your food)?",
@@ -83,4 +146,6 @@ const questionsList = [
     "Did you complete all high-priority tasks for the day?"
 ];
 
+=======
+>>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
 export default TaskForm;
