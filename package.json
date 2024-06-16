@@ -10,24 +10,16 @@
     "express": "^4.19.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-<<<<<<< HEAD
-    "react-scripts": "5.0.1",
-=======
     "react-scripts": "^5.0.1",
->>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-<<<<<<< HEAD
-    "eject": "react-scripts eject"
-=======
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
->>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
   },
   "eslintConfig": {
     "extends": [
@@ -46,10 +38,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
-  }
-=======
   },
   "homepage": "https://ggleversha.github.io/leaderboard"
->>>>>>> 0240b817b6f6b84d031f1421a6a7772eeacfcbfb
 }
