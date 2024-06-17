@@ -4,49 +4,49 @@ import React, { useState, useEffect } from 'react';
 const TaskForm = ({ userId, storeTask, daysCompleted, taskSubmitted }) => {
     const [name, setName] = useState('');
     const [questions, setQuestions] = useState({
-        q1: '',
-        q2: '',
-        q3: '',
-        q4: '',
-        q5: '',
-        q6: '',
-        q7: '',
-        q8: '',
-        q9: '',
-        q10: '',
-        q11: '',
-        q12: '',
-        q13: '',
-        q14: '',
-        q15: ''
+        q1: false,
+        q2: false,
+        q3: false,
+        q4: false,
+        q5: false,
+        q6: false,
+        q7: false,
+        q8: false,
+        q9: false,
+        q10: false,
+        q11: false,
+        q12: false,
+        q13: false,
+        q14: false,
+        q15: false
     });
 
     useEffect(() => {
         if (!taskSubmitted) {
             setName('');
             setQuestions({
-                q1: '',
-                q2: '',
-                q3: '',
-                q4: '',
-                q5: '',
-                q6: '',
-                q7: '',
-                q8: '',
-                q9: '',
-                q10: '',
-                q11: '',
-                q12: '',
-                q13: '',
-                q14: '',
-                q15: ''
+                q1: false,
+                q2: false,
+                q3: false,
+                q4: false,
+                q5: false,
+                q6: false,
+                q7: false,
+                q8: false,
+                q9: false,
+                q10: false,
+                q11: false,
+                q12: false,
+                q13: false,
+                q14: false,
+                q15: false
             });
         }
     }, [taskSubmitted]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const allQuestionsAnsweredYes = Object.values(questions).every(answer => answer.toLowerCase() === 'yes');
+        const allQuestionsAnsweredYes = Object.values(questions).every(answer => answer === true);
         if (name && allQuestionsAnsweredYes) {
             const task = { name, daysCompleted: 1, ...questions };
             storeTask(task);
@@ -54,10 +54,10 @@ const TaskForm = ({ userId, storeTask, daysCompleted, taskSubmitted }) => {
     };
 
     const handleQuestionChange = (e) => {
-        const { name, value } = e.target;
+        const { name, checked } = e.target;
         setQuestions((prevState) => ({
             ...prevState,
-            [name]: value,
+            [name]: checked,
         }));
     };
 
@@ -78,9 +78,9 @@ const TaskForm = ({ userId, storeTask, daysCompleted, taskSubmitted }) => {
                         <div key={`q${index + 1}`} className="question">
                             <label>{`${index + 1}. ${questionsList[index]}`}</label>
                             <input
-                                type="text"
+                                type="checkbox"
                                 name={`q${index + 1}`}
-                                value={questions[`q${index + 1}`]}
+                                checked={questions[`q${index + 1}`]}
                                 onChange={handleQuestionChange}
                                 required
                                 disabled={taskSubmitted}
