@@ -1,5 +1,6 @@
 // CountdownTimer.js
 import React, { useEffect, useState } from 'react';
+import './CountdownTimer.css'; // Import the CSS file for styling
 
 const CountdownTimer = ({ stopTimerForUser, onDayEnd }) => {
     const [timeLeft, setTimeLeft] = useState({ hours: 24, minutes: 0, seconds: 0 });
@@ -26,9 +27,16 @@ const CountdownTimer = ({ stopTimerForUser, onDayEnd }) => {
         }
     }, [stopTimerForUser, onDayEnd]);
 
+    const formatTime = (time) => {
+        const hours = String(time.hours).padStart(2, '0');
+        const minutes = String(time.minutes).padStart(2, '0');
+        const seconds = String(time.seconds).padStart(2, '0');
+        return `${hours}:${minutes}:${seconds}`;
+    };
+
     return (
         <div className="countdown-timer">
-            {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+            <span>{formatTime(timeLeft)}</span>
         </div>
     );
 };
