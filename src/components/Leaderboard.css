@@ -17,6 +17,7 @@
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
+    color: #000; /* Change the text color to black */
   }
   
   .leaderboard th {
