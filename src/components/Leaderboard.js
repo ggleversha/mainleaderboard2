@@ -1,11 +1,12 @@
 // Leaderboard.js
 import React from 'react';
+import './Leaderboard.css'; // Import the CSS file for styling
 
-const Leaderboard = ({ leaderboard }) => {
+const Leaderboard = ({ leaderboard, currentUser }) => {
     return (
-        <div className="leaderboard">
+        <div className="leaderboard-container">
             <h3>Leaderboard</h3>
-            <table>
+            <table className="leaderboard">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -13,8 +14,12 @@ const Leaderboard = ({ leaderboard }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {leaderboard.map(user => (
-                        <tr key={user.userId}>
+                    {leaderboard.map((user) => (
+                        <tr
+                            key={user.userId}
+                            className={currentUser === user.userId ? 'highlight-current-user' : ''}
+                            style={{ backgroundColor: user.reset ? 'red' : 'inherit' }}
+                        >
                             <td>{user.name}</td>
                             <td>{user.daysCompleted}</td>
                         </tr>
