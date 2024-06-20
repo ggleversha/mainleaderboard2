@@ -1,42 +1,41 @@
 /* Leaderboard.css */
 .leaderboard-container {
-    margin: 20px 0;
-    padding: 10px;
-    background-color: #f1f1f1;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .leaderboard {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .leaderboard th,
-  .leaderboard td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: left;
-    color: #000 !important; /* Ensure text color is black */
-  }
-  
-  .leaderboard th {
-    background-color: #4caf50;
-    color: white;
-  }
-  
-  .leaderboard tr {
-    color: #000 !important; /* Ensure text color is black for all rows */
-  }
-  
-  .highlight-current-user {
-    font-weight: bold;
-    background-color: #d1e7dd;
-    color: #000 !important; /* Ensure highlighted text is black */
-  }
-  
-  .highlight-reset {
-    background-color: red;
-    color: white !important; /* Ensure reset text is white */
-  }
-  
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #545151;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard th,
+.leaderboard td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #000 !important; /* Ensure text color is black */
+}
+
+.leaderboard th {
+  background-color: #4caf50;
+  color: white;
+}
+
+.leaderboard tr {
+  color: #000 !important; /* Ensure text color is black for all rows */
+}
+
+.highlight-current-user {
+  font-weight: bold;
+  background-color: #d1e7dd;
+  color: #000 !important; /* Ensure highlighted text is black */
+}
+
+.highlight-reset {
+  background-color: red;
+  color: white !important; /* Ensure reset text is white */
+}
