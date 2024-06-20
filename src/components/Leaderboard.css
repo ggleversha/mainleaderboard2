@@ -32,11 +32,11 @@
   .highlight-current-user {
     font-weight: bold;
     background-color: #d1e7dd;
-    color: #000; /* Ensure highlighted text is black */
+    color: #000 !important; /* Ensure highlighted text is black */
   }
   
   .highlight-reset {
     background-color: red;
-    color: red; /* Ensure reset text is white */
+    color: white !important; /* Ensure reset text is white */
   }
   
