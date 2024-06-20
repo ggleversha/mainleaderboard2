@@ -17,7 +17,7 @@
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
-    color: #000; /* Ensure text color is black */
+    color: #000 !important; /* Ensure text color is black */
   }
   
   .leaderboard th {
@@ -26,7 +26,7 @@
   }
   
   .leaderboard tr {
-    color: #000; /* Ensure text color is black for all rows */
+    color: #000 !important; /* Ensure text color is black for all rows */
   }
   
   .highlight-current-user {
