@@ -37,6 +37,6 @@
   
   .highlight-reset {
     background-color: red;
-    color: white; /* Ensure reset text is white */
+    color: red; /* Ensure reset text is white */
   }
   
