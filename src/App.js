@@ -60,10 +60,11 @@ const App = () => {
         <div className="app-container">
             <header className="app-header">
                 <h1 className="app-title">Papps Self Master - Daily</h1>
-                <h2 className="app-subtitle">ANSWER DAILY QUESTIONS HERE</h2>
             </header>
             <CountdownTimer stopTimerForUser={stopTimerForUser} onDayEnd={handleDayEnd} />
             <TaskForm userId={userId} storeTask={storeTask} daysCompleted={daysCompleted} taskSubmitted={taskSubmitted} />
+            <button onClick={() => alert('ANSWER DAILY QUESTIONS HERE')}>ANSWER DAILY QUESTIONS HERE</button>
+            <button onClick={() => alert('DAILY QUESTIONS')}>DAILY QUESTIONS</button>
             <button onClick={clearTasks}>Clear Tasks</button>
             <Leaderboard leaderboard={leaderboard} />
         </div>
