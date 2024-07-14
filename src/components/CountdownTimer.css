@@ -1,0 +1,14 @@
+.countdown-timer {
+    background-color: #000;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5.1em;
+    padding: 20px;
+    text-align: center;
+    color: #f0a500;
+}
+.countdown-timer span {
+    color: red;
+}
