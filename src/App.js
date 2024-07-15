@@ -1,9 +1,8 @@
-// App.js
 import React, { useState, useEffect } from 'react';
+import './App.css';
 import CountdownTimer from './components/CountdownTimer';
 import TaskForm from './components/TaskForm';
 import Leaderboard from './components/Leaderboard';
-import './App.css';
 
 const generateUserId = () => {
     return 'user_' + Math.floor(Math.random() * 1000000);
@@ -63,8 +62,9 @@ const App = () => {
             </header>
             <CountdownTimer stopTimerForUser={stopTimerForUser} onDayEnd={handleDayEnd} />
             <TaskForm userId={userId} storeTask={storeTask} daysCompleted={daysCompleted} taskSubmitted={taskSubmitted} />
-            <button onClick={() => alert('ANSWER DAILY QUESTIONS HERE')}>ANSWER DAILY QUESTIONS HERE</button>
-            <button onClick={() => alert('DAILY QUESTIONS')}>DAILY QUESTIONS</button>
+            <button className="answer-questions-button" onClick={() => alert('ANSWER DAILY QUESTIONS HERE')}>ANSWER DAILY QUESTIONS HERE</button>
+            <button className="answer-questions-button" onClick={() => alert('DAILY QUESTIONS')}>DAILY QUESTIONS</button>
+            <button className="answer-questions-button" onClick={() => alert('NEW BUTTON')}>NEW BUTTON</button>
             <button onClick={clearTasks}>Clear Tasks</button>
             <Leaderboard leaderboard={leaderboard} />
         </div>
