@@ -1,5 +1,16 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #000;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    margin: 0;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace;
+}
+
 .app-container {
-    font-family: Arial, sans-serif;
     text-align: center;
 }
 
@@ -10,6 +21,15 @@
 .app-title {
     font-size: 1.5em;
     margin-bottom: 10px;
+}
+
+.countdown-timer {
+    background-color: #000;
+    border: none;
+    color: #f0a500;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .answer-questions-button {
@@ -27,4 +47,68 @@
 
 .answer-questions-button:hover {
     background-color: #d4af37;
+}
+
+.leaderboard-container {
+    margin: 0 auto;
+    text-align: left;
+    width: 80%;
+}
+
+.leaderboard {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.leaderboard td, .leaderboard th {
+    border: 1px solid #ddd;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.leaderboard th {
+    background-color: #b58d2b;
+    color: #fff;
+}
+
+.leaderboard tr:nth-child(2n) {
+    background-color: #333;
+}
+
+.leaderboard tr:nth-child(odd) {
+    background-color: #444;
+}
+
+.leaderboard tr.highlight-reset {
+    background-color: red;
+    color: #fff;
+}
+
+.leaderboard td {
+    color: #fff;
+    font-size: 1em;
+}
+
+.task-form {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.task-form table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: auto;
+    width: 100%;
+}
+
+.task-form td, .task-form th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.task-form input, .task-form label {
+    color: #000;
 }

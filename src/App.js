@@ -29,7 +29,7 @@ const App = () => {
         const updatedLeaderboard = leaderboard.map(user =>
             user.userId === userId ? { ...user, daysCompleted: user.daysCompleted + 1 } : user
         );
-        if (!updatedLeaderboard.find(user => user.userId === userId)) {
+        if (!updatedLeaderboard find(user => user.userId === userId)) {
             updatedLeaderboard.push({ userId, name: task.name, daysCompleted: 1 });
         }
         setLeaderboard(updatedLeaderboard);
@@ -62,7 +62,7 @@ const App = () => {
             </header>
             <CountdownTimer stopTimerForUser={stopTimerForUser} onDayEnd={handleDayEnd} />
             <TaskForm userId={userId} storeTask={storeTask} daysCompleted={daysCompleted} taskSubmitted={taskSubmitted} />
-            <button className="answer-questions-button" onClick={() => alert('ANSWER DAILY QUESTIONS HERE')}>ANSWER DAILY QUESTIONS HERE</button>
+            <button className="answer-questions-button" onClick={() => alert('ANSWER DAILY QUESTIONS HERE')}>ANSWER DAILY QUESTIONS BELOW</button>
             <button className="answer-questions-button" onClick={() => alert('DAILY QUESTIONS')}>DAILY QUESTIONS</button>
             <button className="answer-questions-button" onClick={() => alert('NEW BUTTON')}>NEW BUTTON</button>
             <button onClick={clearTasks}>Clear Tasks</button>
