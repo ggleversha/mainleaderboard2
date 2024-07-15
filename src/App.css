@@ -2,13 +2,16 @@
     font-family: Arial, sans-serif;
     text-align: center;
 }
+
 .app-header {
     margin-bottom: 20px;
 }
+
 .app-title {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
+
 .answer-questions-button {
     background-color: #b58d2b;
     border: none;
@@ -21,6 +24,7 @@
     padding: 20px 40px;
     width: 80%;
 }
+
 .answer-questions-button:hover {
     background-color: #d4af37;
 }
